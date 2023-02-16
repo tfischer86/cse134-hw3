@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Experiments</h1>
+        <nav>
+            <h2>Site Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section>
+        <ol>
+            <a href="#"><li>a</li></a>
+        </ol>
+            <h3>Media</h3>
+            <p>U&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;D</p>
+            <p><b>I can nest tags!</b></p>
+
+            <p>&copy; &nbsp;</p>
+            <br>
+            <audio controls>
+                <source src="media/trumpet.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <video width="320" height="240" controls>
+                <source src="media/christmas.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <h3>Template</h3>
+            <p>
+                This &lt;template&gt; should not render, but it is visible in the page source.
+            </p>
+            <template>
+                <nav>
+                    <h2>Site Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experiments.html">Experiments</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="hobbies.html">Hobbies</a></li>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </template>
+
+            <h3>Canvas</h3>
+            <canvas id="canvas" width="150" height="150">Canvas showing a gradient from green to blue</canvas>
+            <script>
+                let canvas = document.getElementById("canvas");
+                let ctx = canvas.getContext("2d");
+                const gradient = ctx.createLinearGradient(0, 0, 150, 0);
+                gradient.addColorStop(0, "green");
+                gradient.addColorStop(1, "blue");
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 150, 150);
+            </script>
+<!--Made in San Diego-->
+            <h3>SVG</h3>
+            <svg>
+                <circle cx="75" cy="75" r="25" />
+                <circle cx="100" cy="100" r="12.5" />
+                <circle cx="112" cy="88" r="6.25" />
+            </svg>
+            <h3>Physical vs Logical Tags</h3>
+            <p>
+                These tags might look different on some browsers.
+                <br>
+                <b>This text is bold.</b>
+                <strong>This text is strong.</strong>
+                <br>
+                <i>This text is italicized.</i>
+                <em>This text is emphasized.</em>
+            </p>
+
+            <h3>Div vs Span</h3>
+            <div>This text is inside a div. It should have newlines around it.</div>
+            <span>This text is in a span. It should not create newlines.</span>
+
+            <h3>Formatting</h3>
+            <pre>This text    should   preserve
+            whitespace and    
+newlines.
+            </pre>
+            <p>This text contains a code sample: <code>void myFunction(int a);</code></p>
+
+            <h3>Recursive iframe</h3>
+            <iframe src="experiments.html"></iframe>
+
+            <h3>Misc tags</h3>
+            <details>
+                <summary>Big Spoiler</summary>
+                Darth Vader is Luke's Father!
+            </details>
+
+
+            <select>
+                <optgroup label="Fruit">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="mango">Mango</option>
+                </optgroup>
+                <optgroup label="Vegetables">
+                    <option value="carrot">Carrot</option>
+                    <option value="celery">Celery</option>
+                    <option value="pepper">Pepper</option>
+                </optgroup>
+            </select>
+        </section>
+    </main>
+</body>
+
+</html>
