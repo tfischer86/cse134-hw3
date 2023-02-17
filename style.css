@@ -1,1 +1,243 @@
-/* TODO: HW3 */
+@font-face {
+    font-family: 'Roboto';
+    src: url('media/Roboto/Roboto-Regular.ttf') format('truetype');
+  }
+
+:root {
+    --nav-link-color: rgba(255, 255, 255, 0.8);
+    --nav-link-color-hover: rgba(158, 158, 158, 0.7);
+
+    --header-bg-color: rgb(16, 27, 46);
+
+    font-family: "Roboto", sans-serif;
+}
+
+#navigation-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg-color);
+}
+
+/* Navigation */
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    transition: color ease 60ms;
+}
+
+.site-nav a:hover {
+    color: var(--nav-link-color-hover);
+}
+
+/* Desktop Navigation: header */
+
+#global-nav {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    gap: 2rem;
+
+    padding: 1rem;
+    list-style-type: none;
+}
+
+#global-nav #link-home {
+    margin-right: auto;
+}
+
+/* Mobile Navigation: Hamburger menu using <details> */
+
+#mobile-nav {
+    display: none;
+
+    padding: 1rem;
+    margin: 0;
+    color: var(--nav-link-color);
+
+    text-align: center;
+}
+
+#mobile-nav summary {
+    list-style: none;
+    transition: color ease 60ms;
+}
+
+#mobile-nav details[open] summary {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--nav-link-color);
+    color: var(--nav-link-color-hover);
+}
+
+#mobile-nav menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-nav a {
+    display: inline-block;
+    width: 100%;
+    padding: 1em 0;
+}
+
+/* Content layout */
+
+body {
+    margin: 0;
+    height: 100vh;
+    /* background-color:rgb(34, 31, 59); */
+}
+
+main {
+    background-color: white;
+}
+
+h1 {
+    padding: 0 1em;
+    text-align: center;
+}
+
+.content-sidebar {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.content>* {
+    padding: 0 1em;
+    background-color: white;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(47, 68, 255)
+}
+
+.sidebar a:hover {
+    color: rgb(39, 55, 197)
+}
+
+.sidebar footer {
+    margin-top: auto;
+    padding-bottom: 1em;
+}
+
+#site-footer {
+    text-align: center;
+    font-size: .75em;
+}
+
+.hero, .hero-resize {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-resize img {
+    width: 100%;
+}
+
+/* Contact Form */
+
+#contact-form {
+    background-color: rgb(236, 236, 236);
+    padding: 1em;
+}
+
+#contact-form > div {
+    background-color: white;
+    padding: 1em;
+}
+
+#contact-form * {
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+}
+
+input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Animation */
+
+@keyframes art-heading {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color: rgb(69, 168, 145);
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+#art-heading {
+    animation: art-heading 2s ease-in;
+    animation-iteration-count: infinite;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 767px) {
+    #global-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    #navigation-header {
+        position: static;
+    }
+
+    .content-sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+}
+
+@media screen and (max-width: 1199px) {
+    main {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}

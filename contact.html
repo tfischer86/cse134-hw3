@@ -6,60 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <style>
-        form {
-            border: 1px solid black;
-            padding: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" media="screen">
 </head>
 
 <body>
-    <header>
-        <h1>Contact Me</h1>
-        <nav>
-            <h2>Site Navigation</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
+    <header id="navigation-header">
+        <nav class="site-nav" id="global-nav">
+            <a id="link-home" href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="contact.html">Contact Me</a>
         </nav>
-        <hr>
+        <nav class="site-nav" id="mobile-nav">
+            <details>
+                <summary>Navigation</summary>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="hobbies.html">Hobbies</a>
+                <a href="contact.html">Contact Me</a>
+            </details>
+        </nav>
     </header>
+
     <main>
-        <form action="#" method="post">
-            <h3>Contact form</h3>
-            <p>Please fill in this form with your message and contact info. Press submit to send me a message.</p>
-            <fieldset>
-                <legend>Contact Info</legend>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-                <label for="telno">Phone Number (optional):</label>
-                <input type="tel" name="telno" id="telno">
-                <label for="cc">CC:</label>
-                <input type="email" name="cc" id="cc">
-            </fieldset>
-            <fieldset>
-                <legend>Message</legend>
-                <label for="subject">Subject:</label>
-                <input type="text" name="subject" id="subject" list="subject-list" required>
-                <datalist id="subject-list">
-                    <option value="General">General</option>
-                    <option value="Job Offer">Job Offer</option>
-                    <option value="Bug Report">Bug Report</option>
-                </datalist>
-                <label for="message">Message Body:</label>
-                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
-        <aside><a href="resume.html">Resume</a></aside>
+        <h1>Contact Me</h1>
+        <section class="content content-sidebar">
+            <form id="contact-form" action="#" method="post">
+                <h2>Contact Form</h2>
+                <p>
+                    Please fill in this form with your message and contact info. Press submit to send me a message.
+                </p>
+                <div>
+                    <fieldset>
+                        <legend>Contact Info</legend>
+                        <label for="name">Name:
+                            <input type="text" name="name" id="name" required>
+                        </label>
+                        <label for="email">Email:
+                            <input type="email" name="email" id="email" required>
+                        </label>
+                        <label for="telno">Phone Number:
+                            <input type="tel" name="telno" id="telno">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Message</legend>
+                        <label for="subject">Subject:
+                            <input type="text" name="subject" id="subject" list="subject-list" required>
+                        </label>
+                        <datalist id="subject-list">
+                            <option value="General">General</option>
+                            <option value="Job Offer">Job Offer</option>
+                            <option value="Bug Report">Bug Report</option>
+                        </datalist>
+                        <label for="message">Message Body:</label>
+                        <textarea name="message" id="message" rows="10" required></textarea>
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <aside class="sidebar">
+                <h2>Job Offerings</h2>
+                <p>
+                    Download my <a href="#">resume</a>.
+                </p>
+            </aside>
+        </section>
     </main>
 </body>
 
