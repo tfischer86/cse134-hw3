@@ -93,10 +93,6 @@ body {
     /* background-color:rgb(34, 31, 59); */
 }
 
-main {
-    background-color: white;
-}
-
 h1 {
     padding: 0 1em;
     text-align: center;
@@ -145,7 +141,7 @@ h1 {
 }
 
 .hero-resize img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
