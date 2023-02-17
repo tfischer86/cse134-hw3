@@ -233,9 +233,9 @@ button[type="submit"] {
         display: block;
     }
 
-    #navigation-header {
+    /* #navigation-header {
         position: static;
-    }
+    } */
 
     .content-sidebar {
         display: flex;
