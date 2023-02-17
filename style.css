@@ -233,6 +233,10 @@ button[type="submit"] {
         display: block;
     }
 
+    #navigation-header {
+        position: static;
+    }
+
     .content-sidebar {
         display: flex;
         flex-direction: column;
