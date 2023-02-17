@@ -16,6 +16,7 @@
     position: sticky;
     top: 0;
     background-color: var(--header-bg-color);
+    z-index: 1;
 }
 
 /* Navigation */
@@ -192,18 +193,31 @@ button[type="submit"] {
         color: black;
     }
 
+    25% {
+        transform: rotate(5deg);
+    }
+
     50% {
         color: rgb(69, 168, 145);
+    }
+    
+    75% {
+        transform: rotate(-5deg);
     }
 
     100% {
         color: black;
+        transform: rotate(0deg);
     }
 }
 
 #art-heading {
-    animation: art-heading 2s ease-in;
+    animation: art-heading 2s linear;
     animation-iteration-count: infinite;
+}
+
+#art-heading-wrapper {
+    position: relative;
 }
 
 /* Responsive Design */
@@ -217,16 +231,10 @@ button[type="submit"] {
         display: block;
     }
 
-    #navigation-header {
-        position: static;
-    }
-
     .content-sidebar {
         display: flex;
         flex-direction: column;
     }
-
-   
 }
 
 @media screen and (max-width: 1199px) {
